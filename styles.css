@@ -1,0 +1,222 @@
+/* Global Styles */
+body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-image: url('threads-background.jpg'); /* Background image resembling threads */
+  background-size: cover;
+  background-attachment: fixed;
+  background-color: rgba(255, 255, 255, 0.7); /* Semi-transparent white background */
+  color: #333;
+}
+
+
+/* Header Styles */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background: linear-gradient(45deg, #FF7E79, #FFDD57); /* Colorful gradient header */
+  color: white;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+header .logo img {
+  height: 120px;
+  width: 120px;
+}
+
+header .company-name {
+  font-size: 1.8em;
+  font-weight: bold;
+}
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+nav ul li {
+  display: inline;
+  margin-right: 15px;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+nav ul li a:hover {
+  text-decoration: underline;
+}
+
+/* Main Content Styles */
+main {
+  padding: 40px;
+  text-align: center;
+}
+
+.intro h2 {
+  font-size: 2.5em;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.intro p {
+  font-size: 1.2em;
+  color: #555;
+}
+
+/* Brands Section */
+.brands {
+  margin-top: 50px;
+}
+header h1 {
+  font-size: 2.5rem;
+  color: white;
+  margin: 0;
+}
+section {
+  padding: 30px;
+  background-color: #ffffff;
+  max-width: 600px;
+  margin: 20px auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+section h2 {
+  font-size: 2rem;
+  color: #800080;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+section ul {
+  list-style: none;
+  padding: 0;
+}
+
+section ul li {
+  margin: 10px 0;
+}
+
+/* Link styling */
+section ul li a {
+  display: inline-block;
+  text-decoration: none;
+  padding: 10px 15px;
+  font-size: 1.2rem;
+  color: #fff;
+  background-color: #800080;
+  border-radius: 5px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+section ul li a:hover {
+  background-color: #d9b3ff;
+  transform: scale(1.05);
+}
+
+
+
+.brands h3 {
+  font-size: 2em;
+  margin-bottom: 20px;
+}
+
+.brand-list {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.brand-item {
+  background-color: #f4f4f4;
+  padding: 20px;
+  width: 200px;
+  margin: 10px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.brand-item:hover {
+  background-color: #eaeaea;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+/* Footer Styles */
+footer {
+  background: linear-gradient(45deg, #FFDD57, #FF7E79); /* Colorful gradient footer */
+  color: white;
+  padding: 20px 0;
+  text-align: center;
+  box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.2);
+}
+
+footer .contact-info {
+  margin-bottom: 10px;
+}
+
+footer .social-media a {
+  color: white;
+  margin: 0 10px;
+  text-decoration: none;
+}
+
+footer .social-media a:hover {
+  text-decoration: underline;
+}
+/* Petticoat Item Styles */
+
+#petticoats {
+  margin-top: 10px;
+  width: 90%;
+  display: flex;
+  
+  flex-direction: row; /* Allow items to wrap to the next line */
+  justify-content: left; /* Distribute space evenly */
+}
+
+.petticoat-item {
+  width: 80%; /* Adjust the width based on your preference */
+  margin: 10px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: row;
+   /* Stack the image and text vertically */
+  justify-content: left; /* Space out the content */
+  height: 240px; /* Set a fixed height for each option */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  padding: 10px;
+}
+.petticoat-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.petticoat-item img {
+  width: 150px; /* Make the image responsive */
+  height: 200px; /* Keep aspect ratio */
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  header, footer {
+      flex-direction: column;
+      text-align: center;
+  }
+
+  nav ul li {
+      display: block;
+      margin-bottom: 10px;
+  }
+
+  .brand-list {
+      flex-direction: column;
+  }
+}

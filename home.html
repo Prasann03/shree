@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clothing Store</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <div class="logo">
+            <img src="data:image/png;base64,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" alt="Company Logo" />
+        </div>
+        <div class="company-name">
+            <h1>SHREE FABRICS </h1>
+        </div>
+        <nav>
+          <ul>
+            <li><a href="home.html">Home</a></li>
+            <li><a href="petticoat.html">Petticoat</a></li>
+            <li><a href="nighty.html">Nighty</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+          </ul>
+        </nav>
+        
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <section class="intro">
+            <h2>Welcome to Our Clothing Store</h2>
+        </section>
+
+        <!-- Brands Section -->
+        <section class="brands">
+            <h3>Our Top Clothing Product </h3>
+            <div class="brand-list">
+                <div class="brand-item" <li><a href="petticoat.html">Petticoat</a></li></div>
+                <div class="brand-item" href="nighty.html">Nighty</div>
+                <div class="brand-item">Saree Falls</div>
+              
+            </div>
+           
+            <section class="intro">
+              
+              <p>Discover the latest fashion trends from top brands. Explore stylish outfits for every occasion.</p>
+          </section>
+        </section>
+    </main>
+
+    <!-- Footer Section -->
+    <footer>
+        <div class="contact-info">
+            <p>Address: 10/119, Vikram Nagar, Shahapur Road, Ichalkaranji- 416115.</p>
+            <p>Email: prathemeshcottonmillpvtltd@gmail.com| Phone: 9097117979</p>
+        </div>
+        <div class="social-media">
+            <p>Follow us on:</p>
+            <a href="#">Facebook</a>
+            <a href="https://www.instagram.com/prasann_k_03/">Instagram</a>
+            <a href="#">Twitter</a>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
