@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Clothing Store</title>
-    <!-- Swiper CSS -->
     <link rel="stylesheet" href="styles.css">
     <style>
         body {
@@ -17,7 +16,7 @@
         /* Swiper container styles */
         .swiper-container {
             width: 100%;
-            height: 100vh; /* Full height for background images */
+            height: 82vh; /* Full height for background images */
             margin: 0 auto;
             border-radius: 10px;
             overflow: hidden;
@@ -27,7 +26,7 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            background-size: cover;
+            background-size: cover; /* Cover the whole slide */
             background-position: center;
             color: white;
             font-size: 20px;
@@ -35,20 +34,25 @@
             position: relative;
         }
 
+        /* Transparent background for text */
+        .transparent-bg {
+            background-color: rgba(113, 90, 90, 0.7); /* White with transparency */
+            padding: 20px; /* Add padding for better visibility */
+            border-radius: 10px; /* Rounded corners */
+            z-index: 2;
+            position: relative;
+        }
+
         .swiper-slide h2 {
             font-size: 32px;
             margin-bottom: 20px;
-            z-index: 2;
-            position: relative;
         }
 
         .swiper-slide p, .swiper-slide ul {
             font-size: 18px;
-            z-index: 2;
-            position: relative;
         }
 
-        /* Make background image full */
+        /* Background images */
         .slide1 { background-image: url("https://t4.ftcdn.net/jpg/10/03/74/87/240_F_1003748790_614tqzNHz7aRYrHcFIRW7PJuZp8ITLSz.jpg"); }
         .slide2 { background-image: url("https://t4.ftcdn.net/jpg/02/90/51/01/240_F_290510160_IPHX2vCxkyuCIMuaOD0l0loKVETevAY3.jpg"); }
         .slide3 { background-image: url("https://t4.ftcdn.net/jpg/03/65/21/75/240_F_365217542_SqD0byWky3uWnd8NHDdxRF6j4mgzPKzh.jpg"); }
@@ -127,6 +131,34 @@
             }
         }
 
+        /* Media Queries for mobile responsiveness */
+        @media (max-width: 768px) {
+            .swiper-container {
+                height: 60vh; /* Adjust height for mobile */
+            }
+            header h1 {
+                font-size: 2rem; /* Adjust font size for header */
+            }
+            .swiper-slide h2 {
+                font-size: 24px; /* Adjust slide heading size */
+            }
+            .swiper-slide p, .swiper-slide ul {
+                font-size: 16px; /* Adjust paragraph size */
+            }
+        }
+
+        @media (max-width: 480px) {
+            header {
+                flex-direction: column; /* Stack logo and name */
+                align-items: flex-start; /* Align to the start */
+            }
+            header h1 {
+                font-size: 1.5rem; /* Further adjust for smaller screens */
+            }
+            .bounce-text {
+                font-size: 1.2rem; /* Adjust bounce text size */
+            }
+        }
     </style>
 </head>
 <body>
@@ -140,12 +172,12 @@
             <p class="bounce-text">Petticoat, Nighty, Saree Falls</p>
         </div>
         <nav>
-          <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="petticoat.html">Petticoat</a></li>
-            <li><a href="nighty.html">Nighty</a></li>
-            <li><a href="contact.html">Contact Us</a></li>
-          </ul>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="petticoat.html">Petticoat</a></li>
+                <li><a href="nighty.html">Nighty</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
         </nav>
     </header>
 
@@ -157,29 +189,38 @@
             <div class="swiper-wrapper">
                 <!-- Slide 1 -->
                 <div class="swiper-slide slide1">
-                    <h2>Who are we?</h2>
-                    <p>We are a leading textile company offering high-quality cotton products to our customers.</p>
+                    <div class="transparent-bg">
+                        <h2>Who are we?</h2>
+                        <p>We are a leading textile company offering high-quality cotton products to our customers.</p>
+                    </div>
                 </div>
                 <!-- Slide 2 -->
                 <div class="swiper-slide slide2">
-                    <h2>Our Vision</h2>
-                    <p>To be a globally recognized brand in the cotton textile industry.</p>
+                    <div class="transparent-bg">
+                        <h2>Our Vision</h2>
+                        <p>To be a globally recognized brand in the cotton textile industry.</p>
+                    </div>
                 </div>
                 <!-- Slide 3 -->
                 <div class="swiper-slide slide3">
-                    <h2>Our Mission</h2>
-                    <p>Delivering superior quality products while ensuring customer satisfaction and sustainability.</p>
+                    <div class="transparent-bg">
+                        <h2>Our Mission</h2>
+                        <p>Delivering superior quality products while ensuring customer satisfaction and sustainability.</p>
+                    </div>
                 </div>
                 <!-- Slide 4 -->
                 <div class="swiper-slide slide4">
-                    <h2>Our Product Features</h2>
-                    <ul>
-                        <li>Durable cotton fabric</li>
-                        <li>Affordable pricing</li>
-                        <li>Variety of designs and sizes</li>
-                        <li>100% organic cotton</li>
-                    </ul>
-                    <div class="since">Since 2000</div>
+                    <div class="transparent-bg">
+                        <h2>Our Product Features</h2>
+                        <ul>
+                            <li>Durable cotton fabric</li>
+                            <li>Affordable pricing</li>
+                            <li>Variety of designs and sizes</li>
+                            <li>100% organic cotton</li>
+                            <li>100% Color Guarantee</li>
+                        </ul>
+                        <div class="since">Since 2000</div>
+                    </div>
                 </div>
             </div>
             <!-- Pagination and navigation -->
